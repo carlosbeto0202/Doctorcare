@@ -1,5 +1,7 @@
 window.addEventListener('scroll', onScroll)
 
+const navigation = document.getElementById("navigation")
+
 onScroll()
 
 function onScroll(){ /* on scroll é uma funcion da Doom do JS, sig= quando eu realizar um scroll */
@@ -50,9 +52,9 @@ function activateMenuAtCurrentSection(section) {
 
 function showNavOnScroll(){
     if (scrollY > 0){
-        navigat.classList.add("scroll")
+        navigation.classList.add("scroll")
     } else{ 
-        navigat.classList.remove("scroll")
+        navigation.classList.remove("scroll")
     }
 }
 
