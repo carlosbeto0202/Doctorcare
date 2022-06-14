@@ -26,11 +26,14 @@ function activateMenuAtCurrentSection(section) {
 
     const sectionTop = section.offsetTop; //topo da secao, onde inicia 
     const sectionHeight = section.offsetHeight; // altura da secao
+    // o top da secao chegou ou passou a linha alvo 
+    const sectionTopReachOrPassedTargtLine = targetLine >= sectionTop;
+
+    // verica se a base esta abaixo da linha alvo
     const sectionEndsAt = sectionTop + sectionHeight; //a seção termina a onde 
     const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
 
-    // o top da secao chegou ou passou a linha alvo 
-    const sectionTopReachOrPassedTargtLine = targetLine >= sectionTop;
+    
     /* console.log(`este eh o target ${sectionTopReachOrPassedTargtLine}`); */
 
     const sectionBoundaries = sectionTopReachOrPassedTargtLine && !sectionEndPassedTargetLine;
@@ -47,9 +50,9 @@ function activateMenuAtCurrentSection(section) {
 
 function showNavOnScroll(){
     if (scrollY > 0){
-        navigation.classList.add("scroll")
+        navigat.classList.add("scroll")
     } else{ 
-        navigation.classList.remove("scroll")
+        navigat.classList.remove("scroll")
     }
 }
 
